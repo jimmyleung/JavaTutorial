@@ -18,6 +18,7 @@ public class ExceptionService {
             System.out.println("end" + System.currentTimeMillis() + "  " + Thread.currentThread().getName());
 
         } catch (FileNotFoundException | InterruptedException e) {
+            //同步方法出现exception，则会释放锁
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e1) {
